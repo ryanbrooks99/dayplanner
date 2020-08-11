@@ -13,6 +13,21 @@ textarea{
   padding: 10px;
 }
 
+.planner {
+  border: none;
+  background-color: transparent;
+  resize: none;
+  overflow: auto;
+  outline: none;
+  width: 100%;
+}
+
+.planner-text {
+  background-color: #a1a6ad;
+  color: white;
+  border-top: 1px solid white;
+}
+
 .jumbotron {
   text-align: center;
   background-color: transparent;
@@ -48,12 +63,12 @@ textarea{
 }
 
 .present {
-  background-color: #ff6961;
+  background-color: #8ebbe0;
   color: white;
 }
 
 .future {
-  background-color: #77dd77;
+  background-color: #28db28;
   color: white;
 }
 
