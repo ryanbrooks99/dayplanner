@@ -1,6 +1,5 @@
 
 
-
 function getLocalStorage(save) {
     let value = localStorage.getItem(save);
     if (value) {
@@ -8,7 +7,7 @@ function getLocalStorage(save) {
     }
 }
 
-$( document ).ready(function() {
+$(document).ready(function() {
 
     // Code to set current date on HTML
 
@@ -19,7 +18,7 @@ $( document ).ready(function() {
     
         var row = $(`<div data-time=${i} id='${i}' class="row">`);
         var column1 = $('<div class="col-sm-2"> <p class="hour">' + formatHoursToAMPM(i) + '</p>');
-        var column2 = $(`<div class="col-sm-8 past"><textarea id=text${i} class="description" width="100%" placeholder="Add event.."></textarea>`);        
+        var column2 = $(`<div class="col-sm-8 past"><textarea id=text${i} class="description" style="width: 100%; max-width: 100%;" placeholder="Add event.."></textarea>`);        
         var column3 = $(`<div class="col-sm-2"><button class="saveBtn" id=${i}><i class="far fa-save"></i></button>`)
         
         // Code to append columns to rows
@@ -33,7 +32,7 @@ $( document ).ready(function() {
         
         getLocalStorage(i);
     }
-    // Code formats hours to AM/PM
+    // Function formats hours to AM/PM
     function formatHoursToAMPM(hours) {
         var ampm = hours >= 12 ? 'pm' : 'am';
         hours = hours % 12;
@@ -42,7 +41,7 @@ $( document ).ready(function() {
     }
 formatHoursToAMPM();
 
-// function to set past, present, and futures color scheme
+// Function to set past, present, and future color scheme
 function updateColors(){
         var currentTime = new Date().getHours();
         for (var i = 9; i < 18; i++) { 
